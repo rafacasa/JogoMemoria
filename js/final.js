@@ -1,4 +1,8 @@
 function ganhador() {
 	var nomeGanhador = _GET("ganhador");
-	document.getElementById("ganhador").innerHTML = nomeGanhador;
+	if(nomeGanhador !== "empate") {
+		document.getElementById("ganhador").innerHTML = nomeGanhador;
+	} else {
+		document.getElementById("p").innerHTML = "O Jogo empatou";
+	}
 }

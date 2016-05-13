@@ -59,10 +59,21 @@
 						 "img/q18.jpg", "img/r18.jpg"];
 			return shuffle(array);
 		}
+		
+		function redirecionar(ganhador) {
+			var url = "final.html?ganhador=" + ganhador;
+			location.href=url;
+		}
 
 		function checkFimDeJogo() {
 			if(acertosP1 + acertosP2 === 18) {
-
+				if(acertosP1 > acertosP2) {
+					redirecionar(nomePlayer1);
+				} else if (acertosP2 > acertosP1) {
+					redirecionar(nomePlayer2)
+				} else {
+					redirecionar("empate");
+				}
 			}
 		}
 
