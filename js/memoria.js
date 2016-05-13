@@ -112,6 +112,7 @@
 			return false;
 		}
 
+		//http://stackoverflow.com/questions/22754315/foreach-loop-for-htmlcollection-elements
 		function bloquearBotoes() {
 			var elementos = document.getElementsByClassName("oculto");
 			(Array.from(elementos)).forEach(function(elemento) {
