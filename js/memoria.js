@@ -77,11 +77,12 @@
 			}
 		}
 
+//http://stackoverflow.com/questions/2155737/remove-css-class-from-element-with-javascript-no-jquery
 		function acerto(posicao1, posicao2) {
 			var nome1 = "but" + posicao1;
 			var nome2 = "but" + posicao2;
-			document.getElementById(nome1).disabled = "disabled";
-			document.getElementById(nome2).disabled = "disabled";
+			document.getElementById(nome1).classList.remove("oculto");
+			document.getElementById(nome2).classList.remove("oculto");
 			if(vezPlayer1) {
 				acertosP1++;
 			} else {
@@ -111,14 +112,30 @@
 			return false;
 		}
 
+		function bloquearBotoes() {
+			var elementos = document.getElementsByClassName("oculto");
+			(Array.from(elementos)).forEach(function(elemento) {
+				elemento.disabled = true;
+			});
+		}
+		
+		function desbloquearBotoes() {
+			var elementos = document.getElementsByClassName("oculto");
+			(Array.from(elementos)).forEach(function(elemento) {
+				elemento.removeAttribute("disabled");
+			});
+		}
+
 		function clique(posicao) {
 			qtdCliques++;
 			var nome = "img" + posicao;
 			document.getElementById(nome).src = arrayImagens[posicao];
 			if(qtdCliques % 2 === 0) {
+				bloquearBotoes();
 				//http://www.pinceladasdaweb.com.br/blog/2009/09/01/os-temporizadores-do-javascript/
 				setTimeout(function () {
 					responder(aberto, posicao);
+					desbloquearBotoes();
 				}, 2000);
 			} else {
 				aberto = posicao;
