@@ -70,7 +70,7 @@
 				if(acertosP1 > acertosP2) {
 					redirecionar(nomePlayer1);
 				} else if (acertosP2 > acertosP1) {
-					redirecionar(nomePlayer2)
+					redirecionar(nomePlayer2);
 				} else {
 					redirecionar("empate");
 				}
