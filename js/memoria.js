@@ -140,6 +140,7 @@
 				}, 2000);
 			} else {
 				aberto = posicao;
+				document.getElementById("but"+posicao).disabled = true;
 			}
 		}
 		
