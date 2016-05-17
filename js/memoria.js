@@ -140,7 +140,24 @@
 				}, 2000);
 			} else {
 				aberto = posicao;
+				document.getElementById("but"+posicao).disabled = true;
 			}
+		}
+		
+		function mostrarTodas() {
+			var i;
+			var nome;
+			for(i = 0; i < 36; i++){
+				nome = "img" + i;
+				document.getElementById(nome).src = arrayImagens[i];
+			}		
+		}
+		
+		function fecharTodas() {
+			var elementos = document.getElementsByClassName("imagem");
+			(Array.from(elementos)).forEach(function(elemento) {
+				elemento.src = "img/oculto.jpg";
+			});
 		}
 		
 		function prepare() {
@@ -155,5 +172,11 @@
 			atualizaNomes();
 			atualizaPlacar();
 			atualizaVezDeJogador();
+			bloquearBotoes();
+			mostrarTodas();
+			setTimeout(function() {
+				fecharTodas();
+				desbloquearBotoes();
+			}, 2000);
 		}
 		//http://tutsmais.com.br/blog/javascript-2/metodos-funcoes-javascript-number-array-string-regexp/#sumario
