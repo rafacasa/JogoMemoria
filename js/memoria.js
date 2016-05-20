@@ -47,7 +47,7 @@
 						 "img/q06.jpeg", "img/r06.jpg",
 						 "img/q07.jpg", "img/r07.jpg",
 						 "img/q08.jpg", "img/r08.jpg",
-						 "img/q09.jpg", "img/r09.jpg",
+						 "img/q09.JPG", "img/r09.jpg",
 						 "img/q10.jpg", "img/r10.jpg",];
 			return shuffle(array);
 		}
