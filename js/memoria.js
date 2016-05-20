@@ -44,19 +44,11 @@
 						 "img/q03.jpg", "img/r03.jpg",
 						 "img/q04.jpg", "img/r04.jpg", 
 						 "img/q05.jpg", "img/r05.jpg",
-						 "img/q06.jpg", "img/r06.jpg",
+						 "img/q06.jpeg", "img/r06.jpg",
 						 "img/q07.jpg", "img/r07.jpg",
 						 "img/q08.jpg", "img/r08.jpg",
 						 "img/q09.jpg", "img/r09.jpg",
-						 "img/q10.jpg", "img/r10.jpg",
-						 "img/q11.jpg", "img/r11.jpg",
-						 "img/q12.jpg", "img/r12.jpg",
-						 "img/q13.jpg", "img/r13.jpg",
-						 "img/q14.jpg", "img/r14.jpg",
-						 "img/q15.jpg", "img/r15.jpg",
-						 "img/q16.jpg", "img/r16.jpg",
-						 "img/q17.jpg", "img/r17.jpg",
-						 "img/q18.jpg", "img/r18.jpg"];
+						 "img/q10.jpg", "img/r10.jpg",];
 			return shuffle(array);
 		}
 		
@@ -66,7 +58,7 @@
 		}
 
 		function checkFimDeJogo() {
-			if(acertosP1 + acertosP2 === 18) {
+			if(acertosP1 + acertosP2 === 10) {
 				if(acertosP1 > acertosP2) {
 					redirecionar(nomePlayer1);
 				} else if (acertosP2 > acertosP1) {
@@ -147,7 +139,7 @@
 		function mostrarTodas() {
 			var i;
 			var nome;
-			for(i = 0; i < 36; i++){
+			for(i = 0; i < 20; i++){
 				nome = "img" + i;
 				document.getElementById(nome).src = arrayImagens[i];
 			}		
@@ -177,6 +169,6 @@
 			setTimeout(function() {
 				fecharTodas();
 				desbloquearBotoes();
-			}, 2000);
+			}, 3000);
 		}
 		//http://tutsmais.com.br/blog/javascript-2/metodos-funcoes-javascript-number-array-string-regexp/#sumario
