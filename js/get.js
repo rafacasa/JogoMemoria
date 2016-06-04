@@ -4,7 +4,7 @@
 		  var url   = window.location.search.replace("?", "");
 		  var itens = url.split("&");
 
-		  for(n in itens)
+		  for(var n in itens)
 		  {
 		    if( itens[n].match(name) )
 		    {
