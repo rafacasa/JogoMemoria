@@ -23,6 +23,20 @@ function shuffle(array) {
 	return array;
 }
 
+//https://xanadu1010.wordpress.com/2013/03/09/usando-javascript-para-pegar-valores-enviados-a-pagina-html-via-get/
+function _GET(name)
+{
+	var url   = window.location.search.replace("?", "");
+	var itens = url.split("&");
+
+	for(var n in itens) {
+		if( itens[n].match(name) ) {
+			return decodeURIComponent(itens[n].replace(name+"=", ""));
+		}
+	}
+	return null;
+}
+
 function atualizaNomes() {
 	document.getElementById("nomeP1").innerHTML = nomePlayer1;
 	document.getElementById("nomeP2").innerHTML = nomePlayer2;
