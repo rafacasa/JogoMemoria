@@ -1,3 +1,12 @@
+var arrayImagens;
+var nomePlayer1;
+var nomePlayer2;
+var vezPlayer1;
+var qtdCliques;
+var aberto;
+var acertosP1;
+var acertosP2;
+
 //http://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array
 function shuffle(array) {
 	var currentIndex = array.length, temporaryValue, randomIndex;
